@@ -72,6 +72,7 @@ const menuContainer = document.getElementById("menu");
 const cartItems = document.getElementById("cart-items");
 const totalElement = document.getElementById("total");
 
+// Renderiza el menú en pantalla
 function renderMenu() {
   menu.forEach((item) => {
     const div = document.createElement("div");
@@ -86,17 +87,20 @@ function renderMenu() {
   });
 }
 
+// Agrega un producto al carrito
 function agregarAlCarrito(id) {
   const producto = menu.find((p) => p.id === id);
   carrito.push(producto);
   actualizarCarrito();
 }
 
+// Elimina un producto del carrito por índice
 function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
   actualizarCarrito();
 }
 
+// Actualiza la lista del carrito en pantalla y el total
 function actualizarCarrito() {
   cartItems.innerHTML = "";
   let total = 0;
@@ -118,37 +122,52 @@ document.querySelector('.logo').addEventListener('mouseenter', () => {
   sonido.currentTime = 0;
   sonido.play();
 });
+
+// ---------------------
+// Lógica de pago
+// ---------------------
+
 // Mostrar la sección de método de pago al hacer clic en "Realizar pago"
 document.getElementById('btn-realizar-pago').addEventListener('click', function() {
-    document.getElementById('seccion-metodo-pago').style.display = 'block';
+  if (carrito.length === 0) {
+    alert('Añade productos al carrito antes de pagar.');
+    return;
+  }
+  document.getElementById('seccion-metodo-pago').style.display = 'block';
 });
 
 // Mostrar/ocultar campos de tarjeta según el método seleccionado
 document.getElementById('pago-tarjeta').addEventListener('change', function() {
-    document.getElementById('campos-tarjeta').style.display = 'block';
+  document.getElementById('campos-tarjeta').style.display = 'block';
 });
 document.getElementById('pago-efectivo').addEventListener('change', function() {
-    document.getElementById('campos-tarjeta').style.display = 'none';
+  document.getElementById('campos-tarjeta').style.display = 'none';
 });
 
 // Validar y procesar el pago al confirmar
 document.getElementById('btn-confirmar-pago').addEventListener('click', function() {
-    const metodo = document.querySelector('input[name="metodo-pago"]:checked').value;
-    if (metodo === 'tarjeta') {
-        const numero = document.getElementById('numero-tarjeta').value.trim();
-        const nombre = document.getElementById('nombre-tarjeta').value.trim();
-        const expiracion = document.getElementById('expiracion-tarjeta').value.trim();
-        const cvv = document.getElementById('cvv-tarjeta').value.trim();
-        if (!numero || !nombre || !expiracion || !cvv) {
-            alert('Por favor, completa todos los datos de la tarjeta.');
-            return;
-        }
-        // Aquí puedes añadir lógica para procesar el pago con tarjeta
-        alert('Pago realizado con tarjeta. ¡Gracias por tu compra!');
-    } else {
-        // Lógica para pago en efectivo
-        alert('Pago en efectivo seleccionado. ¡Gracias por tu compra!');
+  const metodo = document.querySelector('input[name="metodo-pago"]:checked').value;
+  if (metodo === 'tarjeta') {
+    const numero = document.getElementById('numero-tarjeta').value.trim();
+    const nombre = document.getElementById('nombre-tarjeta').value.trim();
+    const expiracion = document.getElementById('expiracion-tarjeta').value.trim();
+    const cvv = document.getElementById('cvv-tarjeta').value.trim();
+    if (!numero || !nombre || !expiracion || !cvv) {
+      alert('Por favor, completa todos los datos de la tarjeta.');
+      return;
     }
-    // Opcional: aquí puedes limpiar el carrito o redirigir al usuario
+    alert('Pago realizado con tarjeta. ¡Gracias por tu compra!');
+  } else {
+    alert('Pago en efectivo seleccionado. ¡Gracias por tu compra!');
+  }
+  // Limpiar carrito y formulario
+  carrito.length = 0;
+  actualizarCarrito();
+  document.getElementById('seccion-metodo-pago').style.display = 'none';
+  document.getElementById('numero-tarjeta').value = '';
+  document.getElementById('nombre-tarjeta').value = '';
+  document.getElementById('expiracion-tarjeta').value = '';
+  document.getElementById('cvv-tarjeta').value = '';
 });
+
 renderMenu();
