@@ -137,7 +137,7 @@
       const users = JSON.parse(localStorage.getItem('users') || '{}');
 
       if (users[username] === password || (username === 'admin' && password === '1234')) {
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
       } else {
         alert('Usuario o contraseña incorrectos.');
       }
