@@ -148,3 +148,74 @@ header p {
 #total {
   font-size: 1.2rem;
 }
+
+/* Estilo métodos de pago y formularios */
+#payment-methods, #card-form, #cash-info {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  animation: fadeIn 0.5s ease;
+}
+
+#payment-methods h3, #card-form h3 {
+  margin-top: 0;
+  color: #ff5e5e;
+}
+
+#payment-methods button {
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#payment-methods button:hover {
+  background-color: #ff3333;
+}
+
+#card-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#card-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#card-form button {
+  align-self: flex-start;
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#card-form button:hover {
+  background-color: #ff3333;
+}
+
+#cash-info p {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
