@@ -20,39 +20,35 @@
     <h2>🛒 Carrito</h2>
     <ul id="cart-items"></ul>
     <p><strong>Total: $<span id="total">0</span></strong></p>
-  </section>
 
-  <section id="payment-methods" style="display: none;">
-    <h3>Seleccione método de pago:</h3>
-    <button onclick="seleccionarPago('tarjeta')">Tarjeta</button>
-    <button onclick="seleccionarPago('efectivo')">Efectivo</button>
-  </section>
+    <div class="payment-section">
+      <h3>Seleccione método de pago:</h3>
+      <button onclick="seleccionarPago('tarjeta')">Tarjeta</button>
+      <button onclick="seleccionarPago('efectivo')">Efectivo</button>
 
-  <section id="card-form" style="display: none;">
-    <h3>Pago con tarjeta</h3>
-    <form onsubmit="validarTarjeta(event)">
-      <label>
-        Nombre en la tarjeta:
-        <input type="text" id="card-name" required />
-      </label><br />
-      <label>
-        Número de tarjeta:
-        <input type="text" id="card-number" maxlength="16" required />
-      </label><br />
-      <label>
-        Fecha de expiración:
-        <input type="month" id="card-expiry" required />
-      </label><br />
-      <label>
-        CVV:
-        <input type="text" id="card-cvv" maxlength="3" required />
-      </label><br />
-      <button type="submit">Pagar</button>
-    </form>
-  </section>
+      <div id="card-form" style="display: none;">
+        <h3>Pago con tarjeta</h3>
+        <form onsubmit="validarTarjeta(event)">
+          <label>Nombre en la tarjeta:
+            <input type="text" id="card-name" required />
+          </label>
+          <label>Número de tarjeta:
+            <input type="text" id="card-number" maxlength="16" required />
+          </label>
+          <label>Fecha de expiración:
+            <input type="month" id="card-expiry" required />
+          </label>
+          <label>CVV:
+            <input type="text" id="card-cvv" maxlength="3" required />
+          </label>
+          <button type="submit">Pagar</button>
+        </form>
+      </div>
 
-  <section id="cash-info" style="display: none;">
-    <p>💵 Recuerde que debe pagar el domicilio al llegar el pedido.</p>
+      <div id="cash-info" style="display: none;">
+        <p>💵 Recuerde que debe pagar el domicilio al llegar el pedido.</p>
+      </div>
+    </div>
   </section>
 
   <audio id="homeroSound" src="sounds/homero.mp3" preload="auto"></audio>
