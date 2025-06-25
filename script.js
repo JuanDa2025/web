@@ -28,6 +28,42 @@ const menu = [
     nombre: "Combo Vegetariano",
     precio: 9500,
     imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftptc3s/vegetariano.jpeg"
+  },
+  {
+    id: 6,
+    nombre: "Combo Hamburguesa",
+    precio: 12000,
+    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+  },
+  {
+    id: 7,
+    nombre: "Combo Hamburguesa",
+    precio: 12000,
+    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+  },
+  {
+    id: 8,
+    nombre: "Combo Hamburguesa",
+    precio: 12000,
+    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+  },
+  {
+    id: 9,
+    nombre: "Combo Hamburguesa",
+    precio: 12000,
+    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+  },
+  {
+    id: 10,
+    nombre: "Combo Hamburguesa",
+    precio: 12000,
+    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+  },
+  {
+    id: 11,
+    nombre: "Combo Hamburguesa",
+    precio: 12000,
+    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
   }
 ];
 
