@@ -72,7 +72,6 @@ const menuContainer = document.getElementById("menu");
 const cartItems = document.getElementById("cart-items");
 const totalElement = document.getElementById("total");
 
-// Renderiza el menú en pantalla
 function renderMenu() {
   menu.forEach((item) => {
     const div = document.createElement("div");
@@ -87,20 +86,17 @@ function renderMenu() {
   });
 }
 
-// Agrega un producto al carrito
 function agregarAlCarrito(id) {
   const producto = menu.find((p) => p.id === id);
   carrito.push(producto);
   actualizarCarrito();
 }
 
-// Elimina un producto del carrito por índice
 function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
   actualizarCarrito();
 }
 
-// Actualiza la lista del carrito en pantalla y el total
 function actualizarCarrito() {
   cartItems.innerHTML = "";
   let total = 0;
