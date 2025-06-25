@@ -13,8 +13,8 @@ const menu = [
   },
   {
     id: 3,
-    nombre: "Combo Papas Fritas",
-    precio: 6000,
+    nombre: "Combo Papas Fritas + Bebida",
+    precio: 8000,
     imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/papas.jpeg"
   },
   {
@@ -31,39 +31,39 @@ const menu = [
   },
   {
     id: 6,
-    nombre: "Combo Hamburguesa",
-    precio: 12000,
-    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+    nombre: "Carne asada",
+    precio: 15000,
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEt51L7no5YWFOS-0fMA6flrfmrXgtMENGUg&s"
   },
   {
     id: 7,
-    nombre: "Combo Hamburguesa",
+    nombre: "Chicharrones acompañados con yuca",
     precio: 12000,
-    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBP52JBviy8iYYGJmE4O087EEfERfJRqRe9A&s"
   },
   {
     id: 8,
-    nombre: "Combo Hamburguesa",
-    precio: 12000,
-    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+    nombre: "Empanadas - Papas - carimañolas und",
+    precio: 2000,
+    imagen: "https://congeladossalomia.com/wp-content/uploads/2020/09/prod-combo-celebracion.jpg"
   },
   {
     id: 9,
-    nombre: "Combo Hamburguesa",
-    precio: 12000,
-    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+    nombre: "Burritos",
+    precio: 10000,
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMYOnbD67fpQn4NuVONCnQcHmA2WiSUPrcOQ&s"
   },
   {
     id: 10,
-    nombre: "Combo Hamburguesa",
-    precio: 12000,
-    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+    nombre: "Pizza",
+    precio: 7000,
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLIoaKElZ6PJTNO2F74jImfIR8YLn4O_3oMQ&s"
   },
   {
     id: 11,
-    nombre: "Combo Hamburguesa",
-    precio: 12000,
-    imagen: "https://assets.onecompiler.app/43ftuv7vk/43ftuyhb4/hamburguesa.jpeg"
+    nombre: "Pechuga de pollo con patacones",
+    precio: 15000,
+    imagen: "https://media-cdn.tripadvisor.com/media/photo-m/1280/17/d9/15/83/pechuga-de-pollo-a-la.jpg"
   }
 ];
 
