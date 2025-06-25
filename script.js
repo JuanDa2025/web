@@ -16,9 +16,6 @@ const carrito = [];
 const menuContainer = document.getElementById("menu");
 const cartItems = document.getElementById("cart-items");
 const totalElement = document.getElementById("total");
-const paymentMethods = document.getElementById("payment-methods");
-const cardForm = document.getElementById("card-form");
-const cashInfo = document.getElementById("cash-info");
 
 function renderMenu() {
   menu.forEach((item) => {
@@ -58,40 +55,16 @@ function actualizarCarrito() {
     total += item.precio;
   });
   totalElement.textContent = total;
-
-  if (carrito.length > 0) {
-    paymentMethods.style.display = "block";
-  } else {
-    paymentMethods.style.display = "none";
-    cardForm.style.display = "none";
-    cashInfo.style.display = "none";
-  }
 }
 
 function seleccionarPago(metodo) {
-  if (metodo === "tarjeta") {
-    cardForm.style.display = "block";
-    cashInfo.style.display = "none";
-  } else if (metodo === "efectivo") {
-    cashInfo.style.display = "block";
-    cardForm.style.display = "none";
-    alert("Recuerde que debe pagar el domicilio al llegar el pedido.");
-  }
+  document.getElementById("card-form").style.display = metodo === "tarjeta" ? "block" : "none";
+  document.getElementById("cash-info").style.display = metodo === "efectivo" ? "block" : "none";
 }
 
 function validarTarjeta(event) {
   event.preventDefault();
-  const nombre = document.getElementById("card-name").value.trim();
-  const numero = document.getElementById("card-number").value.trim();
-  const expiry = document.getElementById("card-expiry").value;
-  const cvv = document.getElementById("card-cvv").value.trim();
-
-  if (nombre === "" || numero.length !== 16 || isNaN(numero) || cvv.length !== 3 || isNaN(cvv)) {
-    alert("Por favor ingrese datos válidos en el formulario.");
-    return;
-  }
-
-  alert("¡Pago con tarjeta exitoso!");
+  alert("💳 Pago con tarjeta procesado correctamente.");
 }
 
 document.querySelector('.logo').addEventListener('mouseenter', () => {
