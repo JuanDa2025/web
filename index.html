@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - Rapisabor</title>
+  <title>Index - Rapisabor</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
@@ -72,14 +72,14 @@
 <body>
   <div class="container">
     <div class="tabs">
-      <button id="loginTab" class="active">Iniciar Sesión</button>
+      <button id="IndexTab" class="active">Iniciar Sesión</button>
       <button id="registerTab">Registrarse</button>
     </div>
 
-    <div id="loginForm">
-      <input type="text" id="loginUsername" placeholder="Usuario" required><br>
-      <input type="password" id="loginPassword" placeholder="Contraseña" required><br>
-      <button class="submit-btn" onclick="login()">Entrar</button>
+    <div id="IndexForm">
+      <input type="text" id="IndexUsername" placeholder="Usuario" required><br>
+      <input type="password" id="IndexPassword" placeholder="Contraseña" required><br>
+      <button class="submit-btn" onclick="Index()">Entrar</button>
     </div>
 
     <div id="registerForm" style="display: none;">
@@ -90,23 +90,23 @@
   </div>
 
   <script>
-    const loginTab = document.getElementById('loginTab');
+    const IndexTab = document.getElementById('IndexTab');
     const registerTab = document.getElementById('registerTab');
-    const loginForm = document.getElementById('loginForm');
+    const IndexForm = document.getElementById('IndexForm');
     const registerForm = document.getElementById('registerForm');
 
-    loginTab.onclick = () => {
-      loginTab.classList.add('active');
+    IndexTab.onclick = () => {
+      IndexTab.classList.add('active');
       registerTab.classList.remove('active');
-      loginForm.style.display = 'block';
+      IndexForm.style.display = 'block';
       registerForm.style.display = 'none';
     };
 
     registerTab.onclick = () => {
       registerTab.classList.add('active');
-      loginTab.classList.remove('active');
+      IndexTab.classList.remove('active');
       registerForm.style.display = 'block';
-      loginForm.style.display = 'none';
+      IndexForm.style.display = 'none';
     };
 
     function register() {
@@ -126,13 +126,13 @@
         users[username] = password;
         localStorage.setItem('users', JSON.stringify(users));
         alert("Registro exitoso. Ahora puedes iniciar sesión.");
-        loginTab.click();
+        IndexTab.click();
       }
     }
 
-    function login() {
-      const username = document.getElementById('loginUsername').value;
-      const password = document.getElementById('loginPassword').value;
+    function Index() {
+      const username = document.getElementById('IndexUsername').value;
+      const password = document.getElementById('IndexPassword').value;
 
       const users = JSON.parse(localStorage.getItem('users') || '{}');
 
